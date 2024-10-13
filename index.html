@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You Pooja</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .message {
+            text-align: center;
+            color: #ffffff;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .message h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5em;
+            margin: 0;
+            animation: float 5s ease-in-out infinite;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .heart {
+            color: #ff6b81;
+            font-size: 8em;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Floating hearts */
+        .floating-hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .floating-hearts div {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255, 107, 129, 0.7);
+            border-radius: 50%;
+            animation: floatHearts 10s infinite ease-in-out;
+        }
+
+        @keyframes floatHearts {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Random heart placement */
+        .floating-hearts div:nth-child(1) {
+            left: 10%;
+            animation-duration: 12s;
+        }
+
+        .floating-hearts div:nth-child(2) {
+            left: 30%;
+            animation-duration: 8s;
+        }
+
+        .floating-hearts div:nth-child(3) {
+            left: 50%;
+            animation-duration: 14s;
+        }
+
+        .floating-hearts div:nth-child(4) {
+            left: 70%;
+            animation-duration: 9s;
+        }
+
+        .floating-hearts div:nth-child(5) {
+            left: 90%;
+            animation-duration: 13s;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .message h1 {
+                font-size: 3.5em;
+            }
+
+            .heart {
+                font-size: 5em;
+            }
+
+            .floating-hearts div {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .message h1 {
+                font-size: 2.5em;
+            }
+
+            .heart {
+                font-size: 4em;
+            }
+
+            .floating-hearts div {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="message">
+        <h1>I Love You</h1>
+        <h1>Pooja</h1>
+        <span class="heart">&hearts;</span>
+    </div>
+
+    <!-- Floating hearts animation -->
+    <div class="floating-hearts">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>
